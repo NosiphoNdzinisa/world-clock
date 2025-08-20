@@ -1,12 +1,18 @@
 body {
-    background-color: #f9f7fe;
-    font-family: sans-serif;
+    margin: 0;
+    background: radial-gradient(circle at top, #0f2027,#203a43,#000000);
+    color: #fff;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family:  sans-serif;
 }
 
 h1 {
     text-align: center;
+    color: #00ffdd;
     font-family: sans-serif;
     font-size: 36px;
+    margin-bottom: 25px;
 }
 
 h2 {
@@ -18,8 +24,12 @@ select {
     display: block;
     width: 100%;
     font-size: 18px;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 10px;
+    background: rgba(0, 255, 221, 0.1);
+    color: #00ffdd;
+    outline: none;
+    cursor: pointer;
 }
 
 .container {
@@ -32,11 +42,33 @@ select {
 }
 
 .city {
+    background: rgba(15,32,47,0.85);
     display: flex;
     margin: 20px 0;
+    border: 1px solid #00ffdd;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 221, 0.3);
     justify-content: space-between;
     padding: 30px 0;
     border-bottom: 1px dashed rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city:hover {
+  transform:scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 221, 0.7);
+}
+
+.city h2 {
+  font-size: 22px;
+  color: #FFD700;  
+}
+
+.city img {
+  width: 32px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #00ffdd;
 }
 
 .city:last-child {
@@ -44,12 +76,15 @@ select {
 }
 
 .date {
+  color: #bbb;
+  margin-top: 8px;
   opacity: 0.7;
 }
 
 .time {
   font-size: 48px;
   font-weight: bold;
+  color: #bbb;
 }
 
 .time small {
@@ -61,6 +96,14 @@ select {
 
 footer {
     text-align: center;
-    font-size: 18px;
-    color: rgba(0,0,0,0.8);
+    font-size: 15px;
+    color: #aaa;
 }
+
+footer a {
+  color: #00ffdd;
+  text-decoration: none;
+}
+
+footer align-self:hover {
+text-shadow: 0 0 8px #00ffdd;
